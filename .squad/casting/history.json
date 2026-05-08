@@ -1,0 +1,24 @@
+{
+  "universe_usage_history": [
+    {
+      "universe": "Firefly",
+      "assignment_id": "chynoweth-squad-001",
+      "date": "2026-05-07",
+      "agents": ["Mal", "Kaylee", "Wash", "Simon", "Zoe"]
+    }
+  ],
+  "assignment_cast_snapshots": {
+    "chynoweth-squad-001": {
+      "project": "chynoweth-squad",
+      "universe": "Firefly",
+      "date": "2026-05-07",
+      "cast": {
+        "Mal": "Lead",
+        "Kaylee": "Frontend Dev",
+        "Wash": "Next.js Dev",
+        "Simon": "Data Engineer",
+        "Zoe": "QA Engineer"
+      }
+    }
+  }
+}
