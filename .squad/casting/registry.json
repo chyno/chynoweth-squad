@@ -35,6 +35,13 @@
       "legacy_named": false,
       "status": "active"
     },
+    "jayne": {
+      "persistent_name": "Jayne",
+      "universe": "Firefly",
+      "created_at": "2026-05-09",
+      "legacy_named": false,
+      "status": "active"
+    },
     "scribe": {
       "persistent_name": "Scribe",
       "universe": "reserved",

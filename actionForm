@@ -1,0 +1,128 @@
+[1mdiff --git a/.squad/casting/registry.json b/.squad/casting/registry.json[m
+[1mindex 9c8d33f..3882d78 100644[m
+[1m--- a/.squad/casting/registry.json[m
+[1m+++ b/.squad/casting/registry.json[m
+[36m@@ -35,6 +35,13 @@[m
+       "legacy_named": false,[m
+       "status": "active"[m
+     },[m
+[32m+[m[32m    "jayne": {[m
+[32m+[m[32m      "persistent_name": "Jayne",[m
+[32m+[m[32m      "universe": "Firefly",[m
+[32m+[m[32m      "created_at": "2026-05-09",[m
+[32m+[m[32m      "legacy_named": false,[m
+[32m+[m[32m      "status": "active"[m
+[32m+[m[32m    },[m
+     "scribe": {[m
+       "persistent_name": "Scribe",[m
+       "universe": "reserved",[m
+[36m@@ -50,4 +57,4 @@[m
+       "status": "active"[m
+     }[m
+   }[m
+[31m-}[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/.squad/routing.md b/.squad/routing.md[m
+[1mindex 2505c3a..beb72dd 100644[m
+[1m--- a/.squad/routing.md[m
+[1m+++ b/.squad/routing.md[m
+[36m@@ -4,34 +4,35 @@[m [mHow to decide who handles what.[m
+ [m
+ ## Routing Table[m
+ [m
+[31m-| Work Type | Route To | Examples |[m
+[31m-|-----------|----------|---------|[m
+[31m-| NX monorepo structure & config | Mal | project.json, nx.json, library extraction, build targets, dependency constraints |[m
+[31m-| Architecture & code review | Mal | PR review, design decisions, cross-cutting concerns, auth wiring, env config |[m
+[31m-| React component library | Kaylee | New components, Tailwind tokens, Figma-to-code, Storybook stories, accessibility |[m
+[31m-| Design system & tokens | Kaylee | tailwind.config.js, design token updates, spacing/color/typography |[m
+[31m-| Next.js pages & layouts | Wash | App Router pages, layouts, loading/error states, middleware, next.config.js |[m
+[31m-| React hooks | Wash | Custom hooks, shared hooks in libs/hooks, data-fetching hooks |[m
+[31m-| GraphQL schema & queries | Simon | Types, queries, mutations, subscriptions, fragments, Apollo config |[m
+[31m-| GraphQL codegen & caching | Simon | graphql-codegen setup, cache policies, optimistic updates, MSW handlers |[m
+[31m-| Playwright integration tests | Zoe | New E2E tests, page object models, test fixtures, CI test config |[m
+[31m-| Test strategy & quality gates | Zoe | Which flows need E2E, CI gate config, flaky test investigation |[m
+[31m-| Scope & priorities | Mal | What to build next, trade-offs, feature decisions |[m
+[31m-| Session logging | Scribe | Automatic — never needs routing |[m
+[31m-| Work queue & backlog | Ralph | GitHub issue monitoring, PR status, board management |[m
+[32m+[m[32m| Work Type                          | Route To | Examples                                                                          |[m
+[32m+[m[32m| ---------------------------------- | -------- | --------------------------------------------------------------------------------- |[m
+[32m+[m[32m| NX monorepo structure & config     | Mal      | project.json, nx.json, library extraction, build targets, dependency constraints  |[m
+[32m+[m[32m| Architecture & code review         | Mal      | PR review, design decisions, cross-cutting concerns, auth wiring, env config      |[m
+[32m+[m[32m| React component library            | Kaylee   | New components, Tailwind tokens, Figma-to-code, Storybook stories, accessibility  |[m
+[32m+[m[32m| Design system & tokens             | Kaylee   | tailwind.config.js, design token updates, spacing/color/typography                |[m
+[32m+[m[32m| Next.js pages & layouts            | Wash     | App Router pages, layouts, loading/error states, middleware, next.config.js       |[m
+[32m+[m[32m| React hooks                        | Wash     | Custom hooks, shared hooks in libs/hooks, data-fetching hooks                     |[m
+[32m+[m[32m| GraphQL schema & queries           | Simon    | Types, queries, mutations, subscriptions, fragments, Apollo config                |[m
+[32m+[m[32m| GraphQL codegen & caching          | Simon    | graphql-codegen setup, cache policies, optimistic updates, MSW handlers           |[m
+[32m+[m[32m| Playwright integration tests       | Zoe      | New E2E tests, page object models, test fixtures, CI test config                  |[m
+[32m+[m[32m| Test strategy & quality gates      | Zoe      | Which flows need E2E, CI gate config, flaky test investigation                    |[m
+[32m+[m[32m| Jest unit tests & component specs  | Jayne    | `.spec.tsx` files, React Testing Library, mock strategies, renderWithApolloClient |[m
+[32m+[m[32m| Test coverage & testability review | Jayne    | Coverage gaps, component API testability, test refactors                          |[m
+[32m+[m[32m| Scope & priorities                 | Mal      | What to build next, trade-offs, feature decisions                                 |[m
+[32m+[m[32m| Session logging                    | Scribe   | Automatic — never needs routing                                                   |[m
+[32m+[m[32m| Work queue & backlog               | Ralph    | GitHub issue monitoring, PR status, board management                              |[m
+ [m
+ ## Issue Routing[m
+ [m
+[31m-| Label | Action | Who |[m
+[31m-|-------|--------|-----|[m
+[31m-| `squad` | Triage: analyze issue, assign `squad:{member}` label | Mal |[m
+[31m-| `squad:mal` | Architecture, code review, monorepo work | Mal |[m
+[31m-| `squad:kaylee` | Component library, Tailwind, Figma implementation | Kaylee |[m
+[31m-| `squad:wash` | Next.js pages, hooks, App Router | Wash |[m
+[31m-| `squad:simon` | GraphQL, Apollo, codegen, data layer | Simon |[m
+[31m-| `squad:zoe` | Playwright tests, E2E, CI quality gates | Zoe |[m
+[31m-[m
+[31m-### How Issue Assignment Works[m
+[32m+[m[32m| Label          | Action                                                  | Who    |[m
+[32m+[m[32m| -------------- | ------------------------------------------------------- | ------ |[m
+[32m+[m[32m| `squad`        | Triage: analyze issue, assign `squad:{member}` label    | Mal    |[m
+[32m+[m[32m| `squad:mal`    | Architecture, code review, monorepo work                | Mal    |[m
+[32m+[m[32m| `squad:kaylee` | Component library, Tailwind, Figma implementation       | Kaylee |[m
+[32m+[m[32m| `squad:wash`   | Next.js pages, hooks, App Router                        | Wash   |[m
+[32m+[m[32m| `squad:simon`  | GraphQL, Apollo, codegen, data layer                    | Simon  |[m
+[32m+[m[32m| `squad:zoe`    | Playwright tests, E2E, CI quality gates                 | Zoe    |[m
+[32m+[m[32m| `squad:jayne`  | Jest unit tests, React Testing Library, component specs | Jayne  |[m
+ [m
+ 1. When a GitHub issue gets the `squad` label, **Mal** triages it — analyzing content, assigning the right `squad:{member}` label, and commenting with triage notes.[m
+ 2. When a `squad:{member}` label is applied, that member picks up the issue in their next session.[m
+[1mdiff --git a/.squad/team.md b/.squad/team.md[m
+[1mindex 292f4a1..1f39e98 100644[m
+[1m--- a/.squad/team.md[m
+[1m+++ b/.squad/team.md[m
+[36m@@ -4,21 +4,22 @@[m
+ [m
+ ## Coordinator[m
+ [m
+[31m-| Name | Role | Notes |[m
+[31m-|------|------|-------|[m
+[32m+[m[32m| Name  | Role        | Notes                                              |[m
+[32m+[m[32m| ----- | ----------- | -------------------------------------------------- |[m
+ | Squad | Coordinator | Routes work, enforces handoffs and reviewer gates. |[m
+ [m
+ ## Members[m
+ [m
+[31m-| Name | Role | Charter | Status |[m
+[31m-|------|------|---------|--------|[m
+[31m-| Mal | Lead | `.squad/agents/mal/charter.md` | ✅ Active |[m
+[31m-| Kaylee | Frontend Dev | `.squad/agents/kaylee/charter.md` | ✅ Active |[m
+[31m-| Wash | Next.js Dev | `.squad/agents/wash/charter.md` | ✅ Active |[m
+[31m-| Simon | Data Engineer | `.squad/agents/simon/charter.md` | ✅ Active |[m
+[31m-| Zoe | QA Engineer | `.squad/agents/zoe/charter.md` | ✅ Active |[m
+[31m-| Scribe | Session Logger | `.squad/agents/scribe/charter.md` | ✅ Active |[m
+[31m-| Ralph | Work Monitor | — | 🔄 Monitor |[m
+[32m+[m[32m| Name   | Role                        | Charter                           | Status     |[m
+[32m+[m[32m| ------ | --------------------------- | --------------------------------- | ---------- |[m
+[32m+[m[32m| Mal    | Lead                        | `.squad/agents/mal/charter.md`    | ✅ Active  |[m
+[32m+[m[32m| Kaylee | Frontend Dev                | `.squad/agents/kaylee/charter.md` | ✅ Active  |[m
+[32m+[m[32m| Wash   | Next.js Dev                 | `.squad/agents/wash/charter.md`   | ✅ Active  |[m
+[32m+[m[32m| Simon  | Data Engineer               | `.squad/agents/simon/charter.md`  | ✅ Active  |[m
+[32m+[m[32m| Zoe    | QA Engineer                 | `.squad/agents/zoe/charter.md`    | ✅ Active  |[m
+[32m+[m[32m| Jayne  | Jest & React Testing Expert | `.squad/agents/jayne/charter.md`  | ✅ Active  |[m
+[32m+[m[32m| Scribe | Session Logger              | `.squad/agents/scribe/charter.md` | ✅ Active  |[m
+[32m+[m[32m| Ralph  | Work Monitor                | —                                 | 🔄 Monitor |[m
+ [m
+ ## Project Context[m
+ [m
