@@ -18,6 +18,8 @@ How to decide who handles what.
 | Test strategy & quality gates      | Zoe      | Which flows need E2E, CI gate config, flaky test investigation                    |
 | Jest unit tests & component specs  | Jayne    | `.spec.tsx` files, React Testing Library, mock strategies, renderWithApolloClient |
 | Test coverage & testability review | Jayne    | Coverage gaps, component API testability, test refactors                          |
+| UAT planning & execution           | Book     | UAT scenarios, acceptance walkthroughs, pre-release validation                    |
+| Playwright test build & run        | Book     | Create/maintain Playwright specs, run/debug `apps/web-e2e`, triage failures       |
 | Scope & priorities                 | Mal      | What to build next, trade-offs, feature decisions                                 |
 | Session logging                    | Scribe   | Automatic — never needs routing                                                   |
 | Work queue & backlog               | Ralph    | GitHub issue monitoring, PR status, board management                              |
@@ -33,6 +35,7 @@ How to decide who handles what.
 | `squad:simon`  | GraphQL, Apollo, codegen, data layer                    | Simon  |
 | `squad:zoe`    | Playwright tests, E2E, CI quality gates                 | Zoe    |
 | `squad:jayne`  | Jest unit tests, React Testing Library, component specs | Jayne  |
+| `squad:book`   | UAT execution, Playwright build/run, E2E failure triage | Book   |
 
 1. When a GitHub issue gets the `squad` label, **Mal** triages it — analyzing content, assigning the right `squad:{member}` label, and commenting with triage notes.
 2. When a `squad:{member}` label is applied, that member picks up the issue in their next session.

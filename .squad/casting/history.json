@@ -4,7 +4,27 @@
       "universe": "Firefly",
       "assignment_id": "chynoweth-squad-001",
       "date": "2026-05-07",
-      "agents": ["Mal", "Kaylee", "Wash", "Simon", "Zoe"]
+      "agents": [
+        "Mal",
+        "Kaylee",
+        "Wash",
+        "Simon",
+        "Zoe"
+      ]
+    },
+    {
+      "universe": "Firefly",
+      "assignment_id": "chynoweth-squad-002",
+      "date": "2026-05-13",
+      "agents": [
+        "Mal",
+        "Kaylee",
+        "Wash",
+        "Simon",
+        "Zoe",
+        "Jayne",
+        "Book"
+      ]
     }
   ],
   "assignment_cast_snapshots": {
@@ -18,6 +38,20 @@
         "Wash": "Next.js Dev",
         "Simon": "Data Engineer",
         "Zoe": "QA Engineer"
+      }
+    },
+    "chynoweth-squad-002": {
+      "project": "chynoweth-squad",
+      "universe": "Firefly",
+      "date": "2026-05-13",
+      "cast": {
+        "Mal": "Lead",
+        "Kaylee": "Frontend Dev",
+        "Wash": "Next.js Dev",
+        "Simon": "Data Engineer",
+        "Zoe": "QA Engineer",
+        "Jayne": "Jest & React Testing Expert",
+        "Book": "UAT & Playwright Expert"
       }
     }
   }

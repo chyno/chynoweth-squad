@@ -18,6 +18,7 @@
 | Simon  | Data Engineer               | `.squad/agents/simon/charter.md`  | ✅ Active  |
 | Zoe    | QA Engineer                 | `.squad/agents/zoe/charter.md`    | ✅ Active  |
 | Jayne  | Jest & React Testing Expert | `.squad/agents/jayne/charter.md`  | ✅ Active  |
+| Book   | UAT & Playwright Expert     | `.squad/agents/book/charter.md`   | ✅ Active  |
 | Scribe | Session Logger              | `.squad/agents/scribe/charter.md` | ✅ Active  |
 | Ralph  | Work Monitor                | —                                 | 🔄 Monitor |
 
