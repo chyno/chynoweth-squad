@@ -28,3 +28,8 @@
 - **Project:** chynoweth-squad — Next.js Enterprise application
 - **Stack:** NX monorepo, React + Tailwind component library, Figma (design), Next.js with hooks, GraphQL (data access), Playwright (integration tests)
 - **Created:** 2026-05-07
+
+## Quick Test Commands
+
+- Run all Playwright E2E tests: `npm run test:e2e`
+- Run payment pages Playwright spec only: `npm run nx -- e2e web-e2e --testFiles=apps/web-e2e/src/specs/payment-pages.spec.ts`
