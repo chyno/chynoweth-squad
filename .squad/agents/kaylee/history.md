@@ -8,3 +8,5 @@
 ## Learnings
 
 <!-- Append new learnings below. Each entry is something lasting about the project. -->
+
+- 2026-05-27: In `apps/web/components/admin/admin/evaluation/requirement-section.tsx`, adding `className="my-auto"` to the preview note `Text` keeps note content visually vertically centered in line with the status row alignment pattern above.
