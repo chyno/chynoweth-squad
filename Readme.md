@@ -41,3 +41,21 @@ EOF
 
 
 How to handle RebuildsPersistent Storage: Everything inside /home/node/ is typically tied to the container's lifecycle. To ensure persistence across full rebuilds, you should ideally perform these actions within /workspaces/ (the standard persistent mount in GitHub Codespaces) instead of /home/node/workspace/.Automatic Setup: Because this script is in your dotfiles, it runs every time you create or rebuild a codespace.The "One-Click" Step after RebuildBecause the devcontainer.json still points VS Code to /home/node/workspace/, when you first open the codespace, you might see an empty folder (since you moved the files).Press Ctrl+Shift+P (or Cmd+Shift+P).Run File: Open Workspace from File....Select /home/node/workspaces/project.code-workspace.VS Code will reload with both repositories visible in the sidebar, and your symlinks will be active.Would you like to know how to add repository-specific permissions to your GitHub account so that your dotfiles can clone your private chynoweth-squad repo without asking for a password?
+
+  [ You Type: "@squad build a new user profile tab" ]
+                         │
+                         ▼
+        [.github/agents/squad.agent.md] (Coordinator)
+          Reads your prompt, assesses the workspace
+                         │
+        ┌────────────────┴────────────────┐
+        ▼                                 ▼
+ [.squad/agents/]                  [.copilot/skills/]
+Consults sub-agent charters       Triggers targeted skills
+to spin up specialized roles       (e.g., /generate-component)
+(Frontend Dev, Tester, etc.)       to output styled React code
+        │                                 │
+        └────────────────┬────────────────┘
+                         ▼
+               [.copilot/mcp-config.json]
+       Executes package scripts to test/verify build
